@@ -1,5 +1,5 @@
 # Nombre de la imagen
-IMAGE_NAME = alpine-vnc-image
+IMAGE_NAME = pdytr-simple-image 
 CONTAINER_NAME = alpine-vnc-container
 VNC_PORT = 5900
 
