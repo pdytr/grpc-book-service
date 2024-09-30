@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package app.pdytr;
+
+option java_package = "app.pdytr";
+option java_outer_classname = "BookServiceProto";
+
+message Book {
+  int32 id = 1;
+  string title = 2;
+  string author = 3;
+}
+
+message AddBookRequest {
+  Book book = 1;
+}
+
+message AddBookResponse {
+  Book book = 1;
+}
+
+message ListBooksRequest {}
+
+message ListBooksResponse {
+  repeated Book books = 1;
+}
+
+service BookService {
+  rpc AddBook(AddBookRequest) returns (AddBookResponse);
+  rpc ListBooks(ListBooksRequest) returns (ListBooksResponse);
+}
